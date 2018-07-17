@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { media } from './../../globals/styleUtils';
 
 export const Container = styled.div`
   background: ${props => props.theme.headerBackground};
@@ -17,19 +18,13 @@ export const InnerContainer = styled.div`
 
 export const LogoContainer = styled.div`
   padding: 0;
-  @media(min-width: 37.5em) {
-    padding: 0 3em;
-  }
-  @media(min-width: 56.25em) {
-    padding: 0 6em;
-  }
+  ${media.medium`padding: 0 3em;`}
+  ${media.large`padding: 0 6em;`}
 `;
 
 export const DrawerContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  @media(min-width: 56.25em) {
-    display: none;
-  }
+  ${media.large`display: none;`}
 `
