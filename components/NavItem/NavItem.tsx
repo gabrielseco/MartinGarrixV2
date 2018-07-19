@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 /* import Link from 'next/Link';
- */import { NavItemElement } from './style';
+ */
+import { NavItemElement, NavItemLink } from './style';
 
 const NavItem = ({
   children,
@@ -8,12 +9,16 @@ const NavItem = ({
   featured,
   href
 }: {
-  children: string,
+  children: ReactElement<any>,
   newTab?: boolean,
   featured?: boolean,
   href: string
 }) => {
-  return <NavItemElement>{children}</NavItemElement>;
+  return (
+  <NavItemElement>
+    <NavItemLink href={href}>{children}</NavItemLink>
+  </NavItemElement>
+  );
 };
 
 export default NavItem;
