@@ -10,8 +10,8 @@ export const Container = styled.div`
 export const InnerContainer = styled.div`
   align-items: center;
   display: flex;
+  height: calc(3.125em - 0.5em);
   max-width: 71.25em;
-  min-height: calc(3.125em - 0.5em);
   padding: 0 0.9375em;
   width: 100%;
 `
