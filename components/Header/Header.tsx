@@ -1,12 +1,24 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
 import { Container, InnerContainer, LogoContainer, DrawerContainer } from './style';
-import { Nav, NavItem } from './../../components';
+import { DrawerNav, Nav, NavItem } from './../../components';
 
-class Header extends Component {
+interface State {
+  isOpen: boolean;
+}
+
+class Header extends Component<{}, State> {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      isOpen: false
+    };
+  }
+
+  onMenuOpen() {
+    this.setState(state => ({
+      isOpen: !state.isOpen
+    }));
   }
 
   render() {
@@ -22,9 +34,9 @@ class Header extends Component {
             </Link>
           </LogoContainer>
           <DrawerContainer>
-            hola drawer
+            <DrawerNav onClick={() => this.onMenuOpen()}/>
           </DrawerContainer>
-          <Nav>
+          <Nav isOpen={this.state.isOpen}>
             <NavItem href="/">Home</NavItem>
             <NavItem href="https://www.bandsintown.com/a/3386497" newTab>
               Tour

@@ -14,7 +14,7 @@ export const NavigationContainer = styled.ul`
   width: 100%;
 
   ${media.medium`
-    padding-left: calc(3.5rem + 0.43rem);
+    padding-left: calc(3.5em + 0.43em);
   `}
 
   ${media.large`

@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { NavigationContainer } from './style';
 
-class Nav extends Component {
+interface Props {
+  isOpen: boolean
+}
+
+class Nav extends Component<Props, {}> {
   constructor(props) {
     super(props);
     this.state = {};
