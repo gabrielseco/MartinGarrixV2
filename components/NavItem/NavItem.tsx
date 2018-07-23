@@ -13,10 +13,14 @@ const NavItem = ({
   featured?: boolean,
   href: string
 }) => {
+  const targetProps =
+    newTab === true
+      ? { target: '_blank', rel: 'noopener noreferrer' }
+      : undefined;
   return (
   <NavItemElement>
     <Link prefetch href={href} passHref>
-      <NavItemLink featured={featured}>{children}</NavItemLink>
+      <NavItemLink featured={featured} {...targetProps}>{children}</NavItemLink>
     </Link>
   </NavItemElement>
   );
