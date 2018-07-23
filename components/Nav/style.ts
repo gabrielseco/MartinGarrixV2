@@ -1,19 +1,33 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { media } from './../../globals/styleUtils';
 
-export const NavigationContainer = styled.ul`
+interface NavigationContainerProps {
+  height: number;
+  isOpen: boolean;
+}
+
+export const NavigationContainer = styled<NavigationContainerProps, any>('ul')`
   background: ${props => props.theme.headerBackground};
+  height: ${props => props.height};
   left: 0;
   list-style-type: none;
   margin: 0;
   opacity: 0;
   padding-left: 1em;
   position: absolute;
-  top: 4em;
+  top: 3.5em;
+  transition: height 0.35s ease, visibility, opacity 0.4s ease;
   visibility: hidden;
   width: 100%;
 
+  ${props => props.isOpen ? css`
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  ` : ''}
+
   ${media.medium`
+    height: auto;
     padding-left: calc(3.5em + 0.43em);
   `}
 
