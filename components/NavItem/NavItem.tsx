@@ -1,6 +1,5 @@
-import React, { ReactElement } from 'react';
-/* import Link from 'next/Link';
- */
+import React from 'react';
+import Link from 'next/link';
 import { NavItemElement, NavItemLink } from './style';
 
 const NavItem = ({
@@ -9,14 +8,16 @@ const NavItem = ({
   featured,
   href
 }: {
-  children: ReactElement<any>,
+  children: string,
   newTab?: boolean,
   featured?: boolean,
   href: string
 }) => {
   return (
   <NavItemElement>
-    <NavItemLink href={href}>{children}</NavItemLink>
+    <Link prefetch href={href} passHref>
+      <NavItemLink featured={featured}>{children}</NavItemLink>
+    </Link>
   </NavItemElement>
   );
 };

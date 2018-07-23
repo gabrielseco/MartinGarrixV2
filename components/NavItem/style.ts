@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import Link from 'next/link';
 import { media } from './../../globals/styleUtils';
 
 const localProps = {
-  navItemSize: '0.875em',
-  navItemDefaultHover: 'rgba(255, 255, 255, 0.75)'
+  navItemSize: '0.875rem',
+  navItemDefaultHover: 'rgba(255, 255, 255, 0.75)',
+  navItemColorFeatured: '#ffff42'
 }
 
 export const NavItemElement = styled.li`
@@ -19,8 +19,12 @@ export const NavItemElement = styled.li`
   }
 `
 
-export const NavItemLink = styled(Link)`
-  color: ${props => props.theme.white};
+interface NavItemLinkProps {
+  featured?: boolean;
+}
+
+export const NavItemLink = styled<NavItemLinkProps, any>('a')`
+  color: ${props => props.featured ? localProps.navItemColorFeatured : props.theme.white};
   font-size: ${localProps.navItemSize};
   font-weight: bold;
   letter-spacing: 0.0625em;
@@ -29,6 +33,6 @@ export const NavItemLink = styled(Link)`
   text-transform: uppercase;
 
   &:hover {
-    color: ${localProps.navItemDefaultHover};
+    color: ${props => props.featured ? localProps.navItemColorFeatured : localProps.navItemDefaultHover};
   }
 `;

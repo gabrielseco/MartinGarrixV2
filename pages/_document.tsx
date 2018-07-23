@@ -14,6 +14,7 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <title>My page</title>
+          <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
           {this.props.styleTags}
         </Head>
         <body>
