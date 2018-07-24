@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeroContainer } from './style';
+import { HeroContainer, ArtboardContainer, Artboard, InfoContainer } from './style';
 
 export interface HeroImageProps {
   images: {
@@ -20,13 +20,13 @@ export interface HeroImageProps {
 const HeroImage = ({ images, info }: HeroImageProps) => {
   return (
     <HeroContainer image={images.backgroundImage}>
-      {/* <div className={styles.artboardContainer}>
-        <img
-          className={styles.artboard}
-          src={images.artboard.url}
-          alt={images.artboard.alt}
-        />
-      </div>
+      <ArtboardContainer>
+        <Artboard src={images.artboard.url} alt={images.artboard.alt}/>
+      </ArtboardContainer>
+      <InfoContainer>
+        
+      </InfoContainer>
+      {/*
       <div className={styles.infoContainer}>
         <small>{info.date}</small>
         <h1 dangerouslySetInnerHTML={{ __html: info.title }} />
