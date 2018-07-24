@@ -1,3 +1,4 @@
+import React from 'react';
 import { ThemeProvider, injectGlobal } from 'styled-components';
 import styledNormalize from 'styled-normalize'
 import { Header } from './../components';
@@ -11,5 +12,7 @@ injectGlobal`
 
 export default () =>
   <ThemeProvider theme={theme}>
-    <Header/>
+    <React.Fragment>
+      <Header/>
+    </React.Fragment>
   </ThemeProvider>
