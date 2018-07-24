@@ -9,14 +9,16 @@ import {
 
 interface IRenderProps {
   isOpen: boolean;
+  toggle: () => void
 }
 
 interface Props {
-  isOpen: boolean;
+  resizeEvent: Event;
   renderTouchEvents: (props: IRenderProps) => JSX.Element;
 }
 
 interface State {
+  event: Event | undefined;
   isOpen: boolean;
 }
 
@@ -24,22 +26,27 @@ class HeaderTouchEvents extends React.Component<Props, State> {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: this.props.isOpen || false
+      event: undefined,
+      isOpen: false
     };
   }
 
-  componentDidUpdate(_: Props, prevState: State) {
-    if (!prevState.isOpen && this.props.isOpen) {
+  componentDidUpdate(prevProps: Props, prevState: State) {
+    if (this.state.event !== prevProps.resizeEvent) {
+      this.setState(
+        {
+          event: prevProps.resizeEvent,
+          isOpen: false
+        },
+      );
+    }
+  
+    if (!prevState.isOpen && this.state.isOpen) {
       addEventsToDocument(this.getDocumentEvents());
     }
 
-    if (prevState.isOpen && !this.props.isOpen) {
+    if (prevState.isOpen && !this.state.isOpen) {
       removeEventsFromDocument(this.getDocumentEvents());
-    }
-    if (prevState.isOpen !== this.props.isOpen) {
-      this.setState({
-        isOpen: this.props.isOpen
-      })
     }
   }
 
@@ -58,16 +65,29 @@ class HeaderTouchEvents extends React.Component<Props, State> {
 
   handleDocumentClick(event: Event) {
     if (
-      this.props.isOpen &&
+      this.state.isOpen &&
       !targetIsDescendant(event, ReactDOM.findDOMNode(this))
     ) {
       this.setState({ isOpen: false });
     }
   }
 
+  toggle() {
+    this.setState(state => ({
+      isOpen: !state.isOpen
+    }));
+  }
+
+  closeMenu() {
+    this.setState({
+      isOpen: false
+    });
+  }
+
   render() {
     return this.props.renderTouchEvents({
-      isOpen: this.state.isOpen
+      isOpen: this.state.isOpen,
+      toggle: this.toggle.bind(this)
     })
   }
 }

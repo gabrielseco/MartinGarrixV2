@@ -12,46 +12,18 @@ interface Props {
   resizeEvent: Event
 }
 
-interface State {
-  isOpen: boolean;
-  event: Event;
-}
+interface State {}
 
 class Header extends Component<Props, State> {
   constructor(props) {
     super(props);
-    this.state = {
-      isOpen: false,
-      event: undefined
-    };
-  }
-
-  componentDidUpdate(prevProps: Props) {
-    if (this.state.event !== prevProps.resizeEvent) {
-      this.setState(
-        {
-          event: prevProps.resizeEvent
-        },
-        () => this.closeMenu()
-      );
-    }
-  }
-
-  onMenuOpen() {
-    this.setState(state => ({
-      isOpen: !state.isOpen
-    }));
-  }
-
-  closeMenu() {
-    this.setState({
-      isOpen: false
-    });
+    this.state = {};
   }
 
   render() {
     return (
-      <HeaderTouchEvents isOpen={this.state.isOpen} renderTouchEvents={({ isOpen }) => (
+      <HeaderTouchEvents resizeEvent={this.props.resizeEvent} 
+                         renderTouchEvents={({ isOpen, toggle }) => (
         <Container>
         <InnerContainer>
           <LogoContainer>
@@ -65,7 +37,7 @@ class Header extends Component<Props, State> {
             </Link>
           </LogoContainer>
           <DrawerContainer>
-            <DrawerNav onClick={() => this.onMenuOpen()}/>
+            <DrawerNav onClick={toggle}/>
           </DrawerContainer>
           <Nav isOpen={isOpen}>
             <NavItem href="/">Home</NavItem>
