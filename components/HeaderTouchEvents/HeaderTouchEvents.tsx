@@ -7,9 +7,13 @@ import {
   targetIsDescendant
 } from './../../utils';
 
+interface IRenderProps {
+  isOpen: boolean;
+}
+
 interface Props {
   isOpen: boolean;
-  renderTouchEvents: ({ isOpen: boolean }) => JSX.Element
+  renderTouchEvents: (props: IRenderProps) => JSX.Element;
 }
 
 interface State {
@@ -25,20 +29,22 @@ class HeaderTouchEvents extends React.Component<Props, State> {
   }
 
   componentDidUpdate(_: Props, prevState: State) {
-    this.setState({
-      isOpen: this.props.isOpen
-    })
-
-    if (!prevState.isOpen && this.state.isOpen) {
+    if (!prevState.isOpen && this.props.isOpen) {
       addEventsToDocument(this.getDocumentEvents());
     }
-    if (prevState.isOpen && !this.state.isOpen) {
+
+    if (prevState.isOpen && !this.props.isOpen) {
       removeEventsFromDocument(this.getDocumentEvents());
+    }
+    if (prevState.isOpen !== this.props.isOpen) {
+      this.setState({
+        isOpen: this.props.isOpen
+      })
     }
   }
 
   componentWillUnmount() {
-    if(this.props.isOpen) {
+    if(this.state.isOpen) {
       removeEventsFromDocument(this.getDocumentEvents());
     }
   }
