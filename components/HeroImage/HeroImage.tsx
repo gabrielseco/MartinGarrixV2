@@ -1,5 +1,11 @@
 import React from 'react';
-import { HeroContainer, ArtboardContainer, Artboard, InfoContainer } from './style';
+import { HeroContainer, 
+         ArtboardContainer, 
+         Artboard, 
+         InfoContainer, 
+         ButtonContainer,
+         Button,
+        } from './style';
 
 export interface HeroImageProps {
   images: {
@@ -24,13 +30,18 @@ const HeroImage = ({ images, info }: HeroImageProps) => {
         <Artboard src={images.artboard.url} alt={images.artboard.alt}/>
       </ArtboardContainer>
       <InfoContainer>
-        
-      </InfoContainer>
-      {/*
-      <div className={styles.infoContainer}>
         <small>{info.date}</small>
         <h1 dangerouslySetInnerHTML={{ __html: info.title }} />
         <p>{info.artist}</p>
+        <ButtonContainer>
+          <Button href={info.url}>
+            <i className="fa fa-play" />
+            &nbsp; Listen Song
+          </Button>
+        </ButtonContainer>
+      </InfoContainer>
+      {/*
+      <div className={styles.infoContainer}>
         <div className={styles.containerButton}>
           <a href={info.url} className={styles.button}>
             <i className="fa fa-play" />

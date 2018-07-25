@@ -1,9 +1,5 @@
-interface ITheme {
-  headerBackground: '#111111',
-  white: 'white'
-}
-
-export const theme: ITheme = {
+export const theme = {
+  buttonBackground: '#f00038',
   headerBackground: '#111111',
   white: 'white',
 }
