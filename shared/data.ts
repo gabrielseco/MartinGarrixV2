@@ -16,3 +16,56 @@ export const heroProps: HeroImageProps = {
     url: '#'
   }
 }
+
+export const latestReleases = {
+  path: `${GET_PUBLIC_PATH('releases')}`,
+  factory: () => {
+    return [
+      {
+        img: `${latestReleases.path}/ocean.jpeg`,
+        url: 'http://stmpd.co/MKOCWE',
+        title: 'Ocean'
+      },
+      {
+        img: `${latestReleases.path}/game-over.jpeg`,
+        url: 'http://stmpd.co/MLGOWE',
+        title: 'Game Over'
+      },
+      {
+        img: `${latestReleases.path}/like-i-do.jpg`,
+        url: 'http://stmpd.co/LIDWE',
+        title: 'Like I Do'
+      },
+      {
+        img: `${latestReleases.path}/so-far-away.jpg`,
+        url: 'https://stmpdrcrds.lnk.to/dlThVWE',
+        title: 'So Far Away'
+      },
+      {
+        img: `${latestReleases.path}/pizza.jpg`,
+        url: 'http://stmpd.co/ltoA2WE',
+        title: 'Pizza'
+      },
+      {
+        img: `${latestReleases.path}/there-for-you.jpg`,
+        url: 'http://stmpd.co/Dj-kpWE',
+        title: 'There for you'
+      },
+      {
+        img: `${latestReleases.path}/byte.jpg`,
+        url: 'http://stmpd.co/iQNlRWE',
+        title: 'Byte'
+      },
+      {
+        img: `${latestReleases.path}/scared-to-be-lonely.jpg`,
+        url: 'http://stmpd.co/hIG_RWE',
+        title: 'Scared to be lonely'
+      },
+      {
+        img: `${latestReleases.path}/make-up-your-mind.jpg`,
+        url: 'http://stmpd.co/sL7lBWE',
+        title: 'Make Up Your Mind'
+      }
+    ];
+  }
+};
