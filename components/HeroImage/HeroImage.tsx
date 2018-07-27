@@ -6,7 +6,7 @@ import {
   InfoContainer, 
   ButtonContainer,
   Button,
-  } from './HeroImage.style';
+} from './HeroImage.style';
 
 export interface HeroImageProps {
   images: {
