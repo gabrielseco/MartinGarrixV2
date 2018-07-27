@@ -6,7 +6,7 @@ import { withResize } from './../../behaviours';
 
 import {
   GET_PUBLIC_PATH,
-} from 'utils';
+} from './../../utils';
 
 interface Props {
   resizeEvent: Event
