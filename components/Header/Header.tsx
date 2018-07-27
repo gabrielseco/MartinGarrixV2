@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
-import { Container, InnerContainer, LogoContainer, DrawerContainer } from './style';
+import { Container, InnerContainer, LogoContainer, DrawerContainer } from './Header.style';
 import { DrawerNav, HeaderTouchEvents, Nav, NavItem } from './../../components';
 import { withResize } from './../../behaviours';
 

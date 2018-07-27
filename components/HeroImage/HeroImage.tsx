@@ -1,11 +1,12 @@
 import React from 'react';
-import { HeroContainer, 
-         ArtboardContainer, 
-         Artboard, 
-         InfoContainer, 
-         ButtonContainer,
-         Button,
-        } from './style';
+import { 
+  HeroContainer, 
+  ArtboardContainer, 
+  Artboard, 
+  InfoContainer, 
+  ButtonContainer,
+  Button,
+  } from './HeroImage.style';
 
 export interface HeroImageProps {
   images: {

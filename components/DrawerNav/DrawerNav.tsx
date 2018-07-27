@@ -1,5 +1,5 @@
 import React from 'react';
-import { Drawer } from './style';
+import { Drawer } from './DrawerNav.style';
 
 const DrawerNav = ({ onClick }: { onClick: () => void }) => (
   <Drawer onClick={() => onClick()}>

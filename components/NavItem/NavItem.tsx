@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { NavItemElement, NavItemLink } from './style';
+import { NavItemElement, NavItemLink } from './NavItem.style';
 
 const NavItem = ({
   children,
