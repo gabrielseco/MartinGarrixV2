@@ -1,22 +1,10 @@
 import React from 'react';
-import { ThemeProvider, injectGlobal } from 'styled-components';
-import styledNormalize from 'styled-normalize'
-import { Header, HeroImage, LatestReleases, Footer } from './../components';
-import { theme } from './../globals/theme';
-import resetCss from './../globals/reset';
-import { heroProps, latestReleases } from './../shared/data';
-
-injectGlobal`
-  ${styledNormalize}
-  ${resetCss as any}
-`
+import { Layout } from 'containers';
+import { HeroImage, LatestReleases } from 'components';
+import { heroProps, latestReleases } from 'shared/data';
 
 export default () =>
-  <ThemeProvider theme={theme}>
-    <React.Fragment>
-      <Header/>
-      <HeroImage {...heroProps}/>
-      <LatestReleases images={latestReleases.factory()} />
-      <Footer/>
-    </React.Fragment>
-  </ThemeProvider>
+  <Layout>
+    <HeroImage {...heroProps}/>
+    <LatestReleases images={latestReleases.factory()} />
+  </Layout>

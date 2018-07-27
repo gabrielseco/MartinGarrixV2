@@ -1,6 +1,5 @@
 import React from 'react';
-import { Item } from './style';
-
+import { Item } from './AlbumGrid.style';
 
 export interface AlbumGridItemProps {
   img: string,

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavigationContainer } from './style';
+import { NavigationContainer } from './Nav.style';
 
 interface Props {
   isOpen: boolean
