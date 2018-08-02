@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from './../../globals/styleUtils';
+import { media } from 'globals/styleUtils';
 
 export const Container = styled.div`
   background: ${props => props.theme.headerBackground};

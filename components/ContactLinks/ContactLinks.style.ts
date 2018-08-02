@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from './../../globals/styleUtils';
+import { media } from 'globals/styleUtils';
 
 const localProps = {
   color: props => props.theme.white

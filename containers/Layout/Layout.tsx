@@ -1,9 +1,9 @@
 import React from 'react';
 import { ThemeProvider, injectGlobal } from 'styled-components';
 import styledNormalize from 'styled-normalize'
-import { Header, Footer } from './../../components';
-import { theme } from './../../globals/theme';
-import resetCss from './../../globals/reset';
+import { Header, Footer } from 'components';
+import { theme } from 'globals/theme';
+import resetCss from 'globals/reset';
 
 injectGlobal`
   ${styledNormalize}

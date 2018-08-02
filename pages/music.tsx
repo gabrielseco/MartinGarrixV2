@@ -1,7 +1,7 @@
 import React from 'react';
-import { Layout } from './../containers';
-import { Releases } from './../components';
-import { releases } from './../shared/data'
+import { Layout } from 'containers';
+import { Releases } from 'components';
+import { releases } from 'shared/data'
 
 export default () =>
   <Layout>

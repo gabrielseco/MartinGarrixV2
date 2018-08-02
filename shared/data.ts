@@ -1,5 +1,5 @@
-import { GET_PUBLIC_PATH } from './../utils';
-import { HeroImageProps } from './../components/HeroImage/HeroImage';
+import { GET_PUBLIC_PATH } from 'utils';
+import { HeroImageProps } from 'components/HeroImage/HeroImage';
 
 export const heroProps: HeroImageProps = {
   images: {

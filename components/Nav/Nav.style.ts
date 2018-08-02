@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { media } from './../../globals/styleUtils';
+import { media } from 'globals/styleUtils';
 
 interface NavigationContainerProps {
   height: number;

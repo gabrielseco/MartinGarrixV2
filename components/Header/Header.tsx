@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
 import { Container, InnerContainer, LogoContainer, DrawerContainer } from './Header.style';
-import { DrawerNav, HeaderTouchEvents, Nav, NavItem } from './../../components';
-import { withResize } from './../../behaviours';
+import { DrawerNav, HeaderTouchEvents, Nav, NavItem } from 'components';
+import { withResize } from 'behaviours';
 
 import {
   GET_PUBLIC_PATH,
-} from './../../utils';
+} from 'utils';
 
 interface Props {
   resizeEvent: Event

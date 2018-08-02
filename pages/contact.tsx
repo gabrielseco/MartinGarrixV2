@@ -1,9 +1,9 @@
 import React from 'react';
-import { Layout } from './../containers';
-import { ContactLinks } from './../components';
-import { withStyle } from './../behaviours';
-import { GET_PUBLIC_PATH } from './../utils';
-import { theme } from './../globals/theme';
+import { Layout } from 'containers';
+import { ContactLinks } from 'components';
+import { withStyle } from 'behaviours';
+import { GET_PUBLIC_PATH } from 'utils';
+import { theme } from 'globals/theme';
 
 const Contact = () => (
   <Layout>

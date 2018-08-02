@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Title } from './LatestReleases.style';
-import { AlbumGrid } from '..';
-import { AlbumGridItemProps } from '../AlbumGridItem/AlbumGridItem';
+import { AlbumGrid } from 'components';
+import { AlbumGridItemProps } from 'components/AlbumGridItem/AlbumGridItem';
 
 interface Props {
   images: AlbumGridItemProps[]

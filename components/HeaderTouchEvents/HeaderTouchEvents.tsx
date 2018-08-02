@@ -5,7 +5,7 @@ import {
   addEventsToDocument,
   removeEventsFromDocument,
   targetIsDescendant
-} from './../../utils';
+} from 'utils';
 
 interface IRenderProps {
   isOpen: boolean;
