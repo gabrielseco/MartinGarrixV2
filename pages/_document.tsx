@@ -13,9 +13,10 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title>My page</title>
+          <title>Martin Garrix | Official Website</title>
           <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
           <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+          <link rel="icon" href="static/images/favicon.png"/>
           {this.props.styleTags}
         </Head>
         <body>

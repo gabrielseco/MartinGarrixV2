@@ -41,15 +41,6 @@ const HeroImage = ({ images, info }: HeroImageProps) => {
           </Button>
         </ButtonContainer>
       </InfoContainer>
-      {/*
-      <div className={styles.infoContainer}>
-        <div className={styles.containerButton}>
-          <a href={info.url} className={styles.button}>
-            <i className="fa fa-play" />
-            &nbsp; Listen Song
-          </a>
-        </div>
-      </div> */}
     </HeroContainer>
   );
 };
