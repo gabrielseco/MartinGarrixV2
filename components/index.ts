@@ -1,5 +1,6 @@
 export * from './AlbumGrid';
 export * from './AlbumGridItem';
+export * from './ContactLinks';
 export * from './DrawerNav';
 export * from './Footer';
 export * from './Header';
