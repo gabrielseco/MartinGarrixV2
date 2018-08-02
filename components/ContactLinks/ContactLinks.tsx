@@ -41,10 +41,10 @@ const ContactLinks = () => (
     </ListItem>
     <ListItem>
       <Title>Fan Mail</Title>
-      <a href="mailto:hello@martingarrix.com">
+      <StyledLink href="mailto:hello@martingarrix.com">
         <i className="fa fa-envelope" />
         &nbsp; hello@martingarrix.com
-      </a>
+      </StyledLink>
     </ListItem>
   </Container>
 );
