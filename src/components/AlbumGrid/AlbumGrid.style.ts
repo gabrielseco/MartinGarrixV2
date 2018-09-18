@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { media } from 'globals/styleUtils';
+import styled from "styled-components";
+import { media } from "src/globals/styleUtils";
 
 export const Container = styled.ul`
   display: flex;
@@ -41,4 +41,4 @@ export const Container = styled.ul`
     }
   }
 }
-`
+`;

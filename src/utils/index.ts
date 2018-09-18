@@ -3,8 +3,8 @@ export const GET_PUBLIC_PATH = (path: string) => {
 };
 
 export const addEventsToDocument = (eventMap: {
-  click: Function,
-  touchend: Function
+  click: Function;
+  touchend: Function;
 }) => {
   Object.keys(eventMap).forEach(key => {
     document.addEventListener(key, eventMap[key], false);
@@ -12,8 +12,8 @@ export const addEventsToDocument = (eventMap: {
 };
 
 export const removeEventsFromDocument = (eventMap: {
-  click: Function,
-  touchend: Function
+  click: Function;
+  touchend: Function;
 }) => {
   Object.keys(eventMap).forEach(key => {
     document.removeEventListener(key, eventMap[key], false);

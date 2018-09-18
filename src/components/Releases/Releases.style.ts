@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { media } from 'globals/styleUtils';
+import styled from "styled-components";
+import { media } from "src/globals/styleUtils";
 
 export const Container = styled.ul`
   display: flex;
@@ -16,11 +16,9 @@ export const ListItem = styled.li`
 
   ${media.medium`
     width: calc(100% / 2);
-  `}
-
-  ${media.large`
+  `} ${media.large`
     width: calc(100% / 3);
-  `}
+  `};
 `;
 
 export const Button = styled.a`

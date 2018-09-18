@@ -1,11 +1,11 @@
-import styled from 'styled-components';
-import { media } from 'globals/styleUtils';
+import styled from "styled-components";
+import { media } from "src/globals/styleUtils";
 
 const localProps = {
-  colorText: '#929292'
-}
+  colorText: "#929292"
+};
 
-export const HeroContainer = styled<{image: string}, any>('div')`
+export const HeroContainer = styled<{ image: string }, any>("div")`
   align-items: center;
   background: url('${props => props.image}');
   background-size: cover;
@@ -24,7 +24,7 @@ export const ArtboardContainer = styled.div`
   ${media.large`
     padding-top: 0;
     width: 15.9375em;
-  `}
+  `};
 `;
 
 export const Artboard = styled.img`
@@ -32,7 +32,7 @@ export const Artboard = styled.img`
 
   ${media.medium`
     max-width: 100%;
-  `}
+  `};
 `;
 
 export const InfoContainer = styled.div`
@@ -47,14 +47,12 @@ export const InfoContainer = styled.div`
     justify-content: flex-start;
     padding-left: 6em;
     width: 100%;
-  `}
-
-  ${media.large`
+  `} ${media.large`
     width: auto;
   `}
 
   small, p {
-    color: ${localProps.colorText}
+    color: ${localProps.colorText};
   }
 
   p {
@@ -66,14 +64,13 @@ export const InfoContainer = styled.div`
     margin: 0 0 0.4em;
     text-align: center;
     text-transform: uppercase;
-    
+
     ${media.medium`
       font-size: 2.5rem;
       text-align: left;
-  `}
+  `};
   }
 `;
-
 
 export const ButtonContainer = styled.div`
   margin-top: 1em;
@@ -90,4 +87,4 @@ export const Button = styled.a`
   padding: 0.75em 2em;
   text-decoration: none;
   text-transform: uppercase;
-`
+`;

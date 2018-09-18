@@ -1,15 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
 import {
   addEventsToDocument,
   removeEventsFromDocument,
   targetIsDescendant
-} from 'utils';
+} from "src/utils";
 
 interface IRenderProps {
   isOpen: boolean;
-  toggle: () => void
+  toggle: () => void;
 }
 
 interface Props {
@@ -33,14 +33,12 @@ class HeaderTouchEvents extends React.Component<Props, State> {
 
   componentDidUpdate(prevProps: Props, prevState: State) {
     if (this.state.event !== prevProps.resizeEvent) {
-      this.setState(
-        {
-          event: prevProps.resizeEvent,
-          isOpen: false
-        },
-      );
+      this.setState({
+        event: prevProps.resizeEvent,
+        isOpen: false
+      });
     }
-  
+
     if (!prevState.isOpen && this.state.isOpen) {
       addEventsToDocument(this.getDocumentEvents());
     }
@@ -51,7 +49,7 @@ class HeaderTouchEvents extends React.Component<Props, State> {
   }
 
   componentWillUnmount() {
-    if(this.state.isOpen) {
+    if (this.state.isOpen) {
       removeEventsFromDocument(this.getDocumentEvents());
     }
   }
@@ -88,7 +86,7 @@ class HeaderTouchEvents extends React.Component<Props, State> {
     return this.props.renderTouchEvents({
       isOpen: this.state.isOpen,
       toggle: this.toggle.bind(this)
-    })
+    });
   }
 }
 

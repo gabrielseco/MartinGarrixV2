@@ -1,8 +1,8 @@
-import React from 'react';
-import { Container, ListItem, Button } from './Releases.style';
-import { AlbumGridItemProps } from 'components/AlbumGridItem/AlbumGridItem';
+import React from "react";
+import { Container, ListItem, Button } from "./Releases.style";
+import { AlbumGridItemProps } from "src/components/AlbumGridItem/AlbumGridItem";
 
-const Releases = ({ releases } : { releases: AlbumGridItemProps[]}) => (
+const Releases = ({ releases }: { releases: AlbumGridItemProps[] }) => (
   <Container>
     {releases.map(release => {
       return (

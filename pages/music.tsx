@@ -1,9 +1,10 @@
-import React from 'react';
-import { Layout } from 'containers';
-import { Releases } from 'components';
-import { releases } from 'shared/data'
+import React from "react";
+import { Layout } from "src/containers";
+import { Releases } from "src/components";
+import { releases } from "src/shared/data";
 
-export default () =>
+export default () => (
   <Layout>
-    <Releases releases={releases.factory()}/>
+    <Releases releases={releases.factory()} />
   </Layout>
+);

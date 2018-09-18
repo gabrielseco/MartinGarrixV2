@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { media } from 'globals/styleUtils';
+import styled from "styled-components";
+import { media } from "src/globals/styleUtils";
 
 export const Container = styled.div`
   background: ${props => props.theme.headerBackground};
@@ -14,17 +14,16 @@ export const InnerContainer = styled.div`
   max-width: 71.25em;
   padding: 0 0.9375em;
   width: 100%;
-`
+`;
 
 export const LogoContainer = styled.div`
   padding: 0;
-  ${media.medium`padding: 0 3em;`}
-  ${media.large`padding: 0 6em;`}
+  ${media.medium`padding: 0 3em;`} ${media.large`padding: 0 6em;`};
 `;
 
 export const DrawerContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  ${media.large`display: none;`}
-`
+  ${media.large`display: none;`};
+`;
